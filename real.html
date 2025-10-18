@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card — Stephanie</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main class="page">
+      <article class="profile-card" data-testid="test-profile-card">
+        <header class="card-header">
+          <!-- banner -->
+          <div class="banner" data-testid="test-user-banner"></div>
+
+          <!-- avatar -->
+          <figure class="avatar">
+            <img
+              src="https://stephany-social-links-profile.vercel.app/assets/images/avatar-jessica.jpeg"
+              alt="Stephanie"
+              data-testid="test-user-avatar"
+            />
+          </figure>
+          <div class="title-block">
+            <!-- username -->
+            <h2 class="user-name" data-testid="test-user-name">Stephanie</h2>
+            <div class="time" aria-label="Current time">
+              <!-- time -->
+              <p>
+                Current Time:
+                <span id="current-time" data-testid="test-user-time">0</span>
+              </p>
+            </div>
+            <!-- role -->
+            <p class="role">Frontend Developer</p>
+          </div>
+        </header>
+
+        <section class="bio">
+          <!-- bio  -->
+          <p data-testid="test-user-bio">
+            Driven by a love for design and detail, I focus on building
+            responsive, accessible, and elegant web interfaces that make digital
+            experiences more enjoyable.
+          </p>
+          <!-- socials -->
+          <h3>Connect with me</h3>
+          <ul class="social-links" data-testid="test-user-social-links">
+            <li>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-github"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-linkedin"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-twitter"
+              >
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="lists">
+          <div class="list hobbies">
+            <h3>Hobbies</h3>
+            <ul data-testid="test-user-hobbies">
+              <li>Reading tech blogs</li>
+              <li>Designing UI mockups</li>
+              <li>Watching movies</li>
+            </ul>
+          </div>
+
+          <div class="list dislikes">
+            <h3>Dislikes</h3>
+            <ul data-testid="test-user-dislikes">
+              <li>Slow websites</li>
+              <li>Messy code</li>
+              <li>Poor accessibility</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+    </main>
+    <script>
+      // Update current time in milliseconds
+      const timeEl = document.getElementById("current-time");
+      function updateTime() {
+        timeEl.textContent = `${Date.now()}ms`;
+      }
+      updateTime();
+      setInterval(updateTime, 1000);
+    </script>
+  </body>
+</html>
