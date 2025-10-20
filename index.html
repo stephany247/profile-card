@@ -15,6 +15,13 @@
   </head>
   <body>
     <main class="page">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/index.html">Profile</a></li>
+          <li><a href="/about.html">About Me</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
       <article class="profile-card" data-testid="test-profile-card">
         <header class="card-header">
           <!-- banner -->
@@ -23,7 +30,7 @@
           <!-- avatar -->
           <figure class="avatar">
             <img
-              src="https://stephany-social-links-profile.vercel.app/assets/images/avatar-jessica.jpeg"
+              src="images/avatar-jessica.jpeg"
               alt="Stephanie"
               data-testid="test-user-avatar"
             />
@@ -46,7 +53,7 @@
         <section class="bio">
           <!-- bio  -->
           <p data-testid="test-user-bio">
-            Driven by a love for design and detail, I focus on building
+            I'm driven by a love for design and detail, I focus on building
             responsive, accessible, and elegant web interfaces that make digital
             experiences more enjoyable.
           </p>
@@ -90,9 +97,9 @@
           <div class="list hobbies">
             <h3>Hobbies</h3>
             <ul data-testid="test-user-hobbies">
-              <li>Reading tech blogs</li>
+              <li>Reading novels and short stories</li>
               <li>Designing UI mockups</li>
-              <li>Watching movies</li>
+              <li>Watching movies and documentaries</li>
             </ul>
           </div>
 
@@ -101,20 +108,12 @@
             <ul data-testid="test-user-dislikes">
               <li>Slow websites</li>
               <li>Messy code</li>
-              <li>Poor accessibility</li>
+              <li>Disorganization</li>
             </ul>
           </div>
         </section>
       </article>
     </main>
-    <script>
-      // Update current time in milliseconds
-      const timeEl = document.getElementById("current-time");
-      function updateTime() {
-        timeEl.textContent = `${Date.now()}ms`;
-      }
-      updateTime();
-      setInterval(updateTime, 1000);
-    </script>
+    <script src="/app.js"></script>
   </body>
 </html>

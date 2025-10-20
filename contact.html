@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Stephanie</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/index.html">Profile</a></li>
+          <li><a href="/about.html">About Me</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <article class="profile-card">
+        <header class="card-header">
+          <div class="banner"></div>
+          <figure class="avatar">
+            <img
+              src="images/avatar-jessica.jpeg"
+              alt="Stephanie"
+            />
+          </figure>
+          <div class="title-block">
+            <h2 class="user-name">Contact Me</h2>
+            <p class="role">Let’s Build Something Beautiful</p>
+          </div>
+        </header>
+
+        <section class="bio">
+          <p>
+            Whether you have a question, a collaboration idea, or just want to
+            connect — fill out the form below and I’ll get back to you soon.
+          </p>
+        </section>
+
+        <section class="contact-form-section">
+          <form id="contact-form" novalidate aria-label="Contact form">
+            <fieldset>
+              <!-- Full Name -->
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  data-testid="test-contact-name"
+                  aria-describedby="test-contact-error-name"
+                  placeholder="Enter your full name"
+                  required
+                />
+                <small
+                  class="error"
+                  id="test-contact-error-name"
+                  data-testid="test-contact-error-name"
+                ></small>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  data-testid="test-contact-email"
+                  aria-describedby="test-contact-error-email"
+                  placeholder="name@example.com"
+                  required
+                />
+                <small
+                  class="error"
+                  id="test-contact-error-email"
+                  data-testid="test-contact-error-email"
+                ></small>
+              </div>
+            </fieldset>
+
+            <!-- Subject -->
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                data-testid="test-contact-subject"
+                aria-describedby="test-contact-error-subject"
+                placeholder="What’s this about?"
+                required
+              />
+              <small
+                class="error"
+                id="test-contact-error-subject"
+                data-testid="test-contact-error-subject"
+              ></small>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                data-testid="test-contact-message"
+                aria-describedby="test-contact-error-message"
+                placeholder="Write your message here..."
+                required
+              ></textarea>
+              <small
+                class="error"
+                id="test-contact-error-message"
+                data-testid="test-contact-error-message"
+              ></small>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn" data-testid="test-contact-submit">
+              Send Message
+            </button>
+
+            <!-- Success message -->
+            <p
+              id="test-contact-success"
+              data-testid="test-contact-success"
+              class="success"
+              hidden
+            >
+              Message sent successfully! 🚀
+            </p>
+          </form>
+        </section>
+      </article>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

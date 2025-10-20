@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me — Stephanie</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main data-testid="test-about-page" class="page">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/index.html">Profile</a></li>
+          <li><a href="/about.html">About Me</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <article class="profile-card">
+        <header class="card-header">
+          <div class="banner"></div>
+          <figure class="avatar">
+            <img
+              src="images/avatar-jessica.jpeg"
+              alt="Stephanie's profile picture"
+            />
+          </figure>
+
+          <div class="title-block">
+            <h1 class="user-name">Stephanie</h1>
+            <p class="role">Frontend Developer</p>
+          </div>
+        </header>
+
+        <!-- Cards container -->
+        <section data-testid="test-about-bio" class="bio-section">
+          <h2>Bio</h2>
+          <p>
+            I’m Stephanie, a frontend developer passionate about creating clean,
+            responsive, and accessible web interfaces. I enjoy turning ideas
+            into interactive experiences that feel intuitive and look
+            well-balanced across all devices.
+          </p>
+          <p>
+            My journey started from curiosity — a simple fascination with how
+            websites worked — and has grown into a love for building digital
+            experiences that people can enjoy and easily navigate.
+          </p>
+        </section>
+        <div class="about-cards">
+          <section data-testid="test-about-goals" class="card">
+            <h2>Goals in This Program</h2>
+            <p>
+              My main goal is to sharpen my frontend development skills —
+              learning to write cleaner, scalable code while mastering modern
+              practices in accessibility, layout design, and component
+              structure. I also want to build more confidence in transforming
+              design ideas into production-ready projects.
+            </p>
+          </section>
+
+          <section data-testid="test-about-confidence" class="card">
+            <h2>Areas of Low Confidence</h2>
+            <p>
+              I sometimes struggle with debugging complex layout issues and
+              ensuring full responsiveness across all screen sizes. I’m also
+              working to improve my confidence in structuring JavaScript logic
+              efficiently — especially when handling interactive components.
+            </p>
+          </section>
+
+          <section data-testid="test-about-future-note" class="card">
+            <h2>Note to Future Self</h2>
+            <p>
+              Keep going, no matter how slow the progress feels. Remember how
+              far you’ve come from that first HTML tag. You’re not just learning
+              to code — you’re learning persistence, clarity, and confidence.
+              Keep building, keep growing, and never lose your curiosity.
+            </p>
+          </section>
+
+          <section data-testid="test-about-extra" class="card">
+            <h2>Extra Thoughts</h2>
+            <p>
+              Every project, no matter how small, is a step toward mastery. The
+              key is consistency — not perfection. Celebrate progress, stay
+              curious, and always be kind to yourself during the process.
+            </p>
+          </section>
+        </div>
+      </article>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
