@@ -41,7 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
   navLinks.forEach((link) => {
     const linkPath = link.getAttribute("href").split("/").pop(); // get last part
     const currentPage = currentPath.split("/").pop();
-    if (linkPath === currentPage) {
+    if (
+      (currentPath === "/" && linkPath === "/index.html") ||
+      linkPath === currentPage
+    ) {
       link.classList.add("active");
     }
   });
