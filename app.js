@@ -1,5 +1,25 @@
+const timeEl = document.getElementById("current-time");
+const currentPath = window.location.pathname;
+const navLinks = document.querySelectorAll(".nav-links a");
+const form = document.getElementById("contact-form");
+const successMsg = document.getElementById("test-contact-success");
+const successToast = document.getElementById("test-contact-success");
+
+const fields = {
+  name: document.getElementById("name"),
+  email: document.getElementById("email"),
+  subject: document.getElementById("subject"),
+  message: document.getElementById("message"),
+};
+
+const errors = {
+  name: document.getElementById("test-contact-error-name"),
+  email: document.getElementById("test-contact-error-email"),
+  subject: document.getElementById("test-contact-error-subject"),
+  message: document.getElementById("test-contact-error-message"),
+};
+
 document.addEventListener("DOMContentLoaded", () => {
-  const timeEl = document.getElementById("current-time");
   if (timeEl) {
     function updateTime() {
       timeEl.textContent = `${Date.now()}ms`;
@@ -7,9 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     updateTime();
     setInterval(updateTime, 1000);
   }
-
-  const currentPath = window.location.pathname;
-  const navLinks = document.querySelectorAll(".nav-links a");
 
   navLinks.forEach((link) => {
     const linkPath = link.getAttribute("href");
@@ -21,30 +38,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  const form = document.getElementById("contact-form");
   if (!form) return;
-
-  const successMsg = document.getElementById("test-contact-success");
-
-  const fields = {
-    name: document.getElementById("name"),
-    email: document.getElementById("email"),
-    subject: document.getElementById("subject"),
-    message: document.getElementById("message"),
-  };
-
-  const errors = {
-    name: document.getElementById("test-contact-error-name"),
-    email: document.getElementById("test-contact-error-email"),
-    subject: document.getElementById("test-contact-error-subject"),
-    message: document.getElementById("test-contact-error-message"),
-  };
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     let isValid = true;
-    successMsg.hidden = true;
     Object.values(errors).forEach((el) => (el.textContent = ""));
 
     // Name
@@ -79,23 +78,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (isValid) {
       form.reset();
-      successMsg.hidden = false;
+      showSuccessToast();
     }
   });
 });
 
-const successToast = document.getElementById("test-contact-success");
-
+// display toast
 function showSuccessToast() {
   successToast.classList.add("show");
   setTimeout(() => {
     successToast.classList.remove("show");
-  }, 3000); // disappears after 3 seconds
+  }, 3000);
 }
-
-// Example usage (after form submission success)
-document.querySelector("form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  // simulate successful send
-  showSuccessToast();
-});
