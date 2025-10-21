@@ -59,7 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
       errors.email.textContent = "Please enter your email address.";
       isValid = false;
     } else if (!emailPattern.test(fields.email.value.trim())) {
-      errors.email.textContent = "Please enter a valid email (name@example.com).";
+      errors.email.textContent =
+        "Please enter a valid email (name@example.com).";
       isValid = false;
     }
 
@@ -81,4 +82,20 @@ document.addEventListener("DOMContentLoaded", () => {
       successMsg.hidden = false;
     }
   });
+});
+
+const successToast = document.getElementById("test-contact-success");
+
+function showSuccessToast() {
+  successToast.classList.add("show");
+  setTimeout(() => {
+    successToast.classList.remove("show");
+  }, 3000); // disappears after 3 seconds
+}
+
+// Example usage (after form submission success)
+document.querySelector("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  // simulate successful send
+  showSuccessToast();
 });
