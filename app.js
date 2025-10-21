@@ -28,12 +28,20 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(updateTime, 1000);
   }
 
+  // navLinks.forEach((link) => {
+  //   const linkPath = link.getAttribute("href");
+  //   if (
+  //     (currentPath === "/" && linkPath === "/index.html") ||
+  //     currentPath.includes(linkPath)
+  //   ) {
+  //     link.classList.add("active");
+  //   }
+  // });
+
   navLinks.forEach((link) => {
-    const linkPath = link.getAttribute("href");
-    if (
-      (currentPath === "/" && linkPath === "/index.html") ||
-      currentPath.includes(linkPath)
-    ) {
+    const linkPath = link.getAttribute("href").split("/").pop(); // get last part
+    const currentPage = currentPath.split("/").pop();
+    if (linkPath === currentPage) {
       link.classList.add("active");
     }
   });
